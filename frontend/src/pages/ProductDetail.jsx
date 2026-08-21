@@ -46,7 +46,7 @@ function ProductDetail() {
         <img src={product.imageUrl} alt={product.name} className="aspect-square h-full w-full object-cover" />
         <div className="flex flex-col justify-center p-7 md:p-12">
           <p className="text-xs font-black uppercase tracking-[0.2em] text-[#d45b3f]">{product.category}</p>
-          <h1 className="mt-4 text-4xl font-black leading-none tracking-[-0.05em] text-[#18302b] md:text-5xl">{product.name}</h1>
+          <h1 className="mt-4 text-4xl font-black leading-none tracking-tighter text-[#18302b] md:text-5xl">{product.name}</h1>
           <p className="mt-6 text-3xl font-black text-[#18302b]">₹{product.price.toLocaleString("en-IN")}</p>
           <p className="mt-5 leading-7 text-[#60716c]">{product.description}</p>
           <p className="mt-6 border-t border-[#e1e4dc] pt-5 text-sm font-bold text-[#60716c]">{product.stock > 0 ? `${product.stock} available now` : "Currently out of stock"}</p>

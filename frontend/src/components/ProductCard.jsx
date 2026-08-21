@@ -6,7 +6,7 @@ function ProductCard({ product }) {
 
   return (
     <div className="group overflow-hidden rounded-2xl border border-[#e1e4dc] bg-white shadow-[0_8px_30px_rgba(24,48,43,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_35px_rgba(24,48,43,0.12)]">
-      <div className="relative aspect-[4/3] overflow-hidden bg-[#e9ede5]">
+      <div className="relative aspect-4/3 overflow-hidden bg-[#e9ede5]">
         <img
           src={product.imageUrl}
           alt={product.name}
