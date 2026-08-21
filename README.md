@@ -11,41 +11,50 @@ clean separation between a React (Vite) frontend and a Node/Express REST API bac
 **Tooling:** Git, nodemon
 
 ## Project Structure
+```text
 ecommerce-crud-app/
-├── frontend/ # React frontend (Vite)
-│ ├── src/
-│ │ ├── api/
-│ │ │ └── axios.js # configured Axios instance
-│ │ ├── components/ # reusable, presentational components
-│ │ │ ├── Navbar.jsx
-│ │ │ ├── ProductCard.jsx
-│ │ │ ├── Button.jsx
-│ │ │ └── Loader.jsx
-│ │ ├── pages/ # route-level components (own data fetching)
-│ │ │ ├── ProductList.jsx
-│ │ │ ├── ProductDetail.jsx
-│ │ │ ├── AddProduct.jsx
-│ │ │ └── EditProduct.jsx
-│ │ ├── App.jsx # route definitions
-│ │ ├── main.jsx # app entry point
-│ │ └── index.css # Tailwind directives
-│ ├── vite.config.js # includes dev proxy to backend
-│ ├── tailwind.config.js
-│ └── package.json
-│
-└── backend/ # Node + Express backend
-├── src/
-│ ├── data/
-│ │ └── products.js # in-memory product store + seed data
-│ ├── controllers/
-│ │ └── productController.js
-│ ├── routes/
-│ │ └── productRoutes.js
-│ ├── middleware/
-│ │ └── errorHandler.js # centralized error + 404 handling
-│ └── app.js # Express app config (middleware, routes)
-├── server.js # entry point (starts the server)
-└── package.json
+├── backend/                         # Node.js + Express REST API
+│   ├── src/
+│   │   ├── controllers/
+│   │   │   └── productController.js
+│   │   ├── data/
+│   │   │   └── products.js          # in-memory product store and seed data
+│   │   ├── middleware/
+│   │   │   └── errorHandler.js      # centralized error and 404 handling
+│   │   ├── routes/
+│   │   │   └── productRoutes.js
+│   │   └── app.js                   # Express app configuration
+│   ├── server.js                    # server entry point
+│   └── package.json
+├── frontend/                        # React + Vite frontend
+│   ├── public/
+│   ├── src/
+│   │   ├── api/
+│   │   │   └── axios.js             # configured Axios instance
+│   │   ├── assets/
+│   │   ├── components/              # reusable UI components
+│   │   │   ├── Button.jsx
+│   │   │   ├── Loader.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   └── ProductCard.jsx
+│   │   ├── pages/                   # route-level components
+│   │   │   ├── AddProduct.jsx
+│   │   │   ├── EditProduct.jsx
+│   │   │   ├── ProductDetail.jsx
+│   │   │   └── ProductList.jsx
+│   │   ├── App.jsx                  # route definitions
+│   │   ├── index.css                # Tailwind directives
+│   │   ├── main.jsx                 # app entry point
+│   │   └── vite.config.js
+│   ├── index.html
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── tailwind.config.js
+│   └── vite.config.js               # Vite dev proxy configuration
+├── package.json
+├── package-lock.json
+└── README.md
+```
 
 
 ## Features
@@ -106,7 +115,7 @@ cd backend
 npm install
 ```
 
-Create a `.env` file in `server/`:
+Create a `.env` file in `backend/`:
 
 PORT=5000
 
