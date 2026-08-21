@@ -46,7 +46,7 @@ ecommerce-crud-app/
 │   │   ├── App.jsx                  # route definitions
 │   │   ├── index.css                # Tailwind directives
 │   │   ├── main.jsx                 # app entry point
-│   │   └── vite.config.js
+│   │   
 │   ├── index.html
 │   ├── package.json
 │   ├── postcss.config.js
